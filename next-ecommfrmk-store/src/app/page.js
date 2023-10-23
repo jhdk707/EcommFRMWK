@@ -44,6 +44,7 @@ export default function Home() {
 				{products.map((product) => {
 					return (
 						<div key={product.id} className={styles.card}>
+							<img src={product.image} alt={`Preview of ${product.title}`} />
 							<h3>{product.title}</h3>
 							<p>{product.description}</p>
 							<p>${product.price}</p>
