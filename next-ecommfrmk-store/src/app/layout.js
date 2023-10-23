@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+// import Script from "next/script"; // Import the Script component
 import "./globals.css";
 import Head from "next/head";
 
