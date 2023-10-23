@@ -1,8 +1,17 @@
+
 [
     {
         "title": "Snipcart Logo Sticker",
         "id": "sticker_logo",
         "description": "Show off your Snipcart support logo with a logo sticker",
         "price": "2.00"
+    },
+    {
+        "title": "The Expanse Book Series",
+        "image": "./images/theexpanse.jpg",
+        "id": "expanse_collection",
+        "description": "Get lost in space with a captivating 13 book hard- scifi series",
+        "price": "105.99"
     }
+
 ]
