@@ -1,48 +1,30 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import products from "products.json";
-import Warlock from "../../public/images/the-web-warlock.png"
+import Warlock from "../../public/images/the-web-warlock.png";
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+	return (
+		<main className={styles.main}>
+			<div className={styles.description}>
+				<p>Ecommerce Framework 10-22-2023&nbsp;</p>
+				<div>
+					<p>By Web Warlocks</p>
+				</div>
+			</div>
 
-      <div>
-        <Image
-          src={Warlock}
-          alt="Web Warlock"
-          width={440}
-          height={440}
-          style={{
-            objectFit: "cover",
-            borderRadius: "100px",
-          }}
-        />
-      </div>
-
+			<div>
+				<Image
+					src={Warlock}
+					alt="Web Warlock"
+					width={440}
+					height={440}
+					style={{
+						objectFit: "cover",
+						borderRadius: "100px",
+					}}
+				/>
+			</div>
 
 			<div className={styles.grid}>
 				{products.map((product) => {
@@ -53,12 +35,32 @@ export default function Home() {
 							<p>{product.description}</p>
 							<p>${product.price}</p>
 							<p>
-								<button>Add to Cart</button>
+								<button
+									className="snipcart-add-item"
+									data-item-id={product.id}
+									data-item-image={product.image}
+									data-item-name={product.title}
+									data-item-price={product.price}
+								>
+									Add to Cart
+								</button>
 							</p>
 						</div>
 					);
 				})}
 			</div>
+			<footer>
+				<p>footer</p>
+			</footer>
+			<script
+				async
+				src="https://cdn.snipcart.com/themes/v3.2.2/default/snipcart.js"
+			/>
+			<div
+				hidden
+				id="snipcart"
+				data-api-key="ZWE3ZTM4YjktNjZiYS00OTI4LWI5N2UtNTY4MGQyZWI3ZGEwNjM4MzM2MjA1ODc2Nzg2MzYx"
+			/>
 		</main>
 	);
 }
