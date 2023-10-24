@@ -1,7 +1,8 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import products from "products.json";
-import Warlock from "../../public/images/the-web-warlock.png"
+import Warlock from "../../public/images/the-web-warlock.png";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -43,10 +44,15 @@ export default function Home() {
         />
       </div>
 
+      <h1 className={styles.title}>
+        New <Link href="/salespage/first-category">Category!</Link>
+      </h1>
+
       <div className={styles.grid}>
         {products.map((product) => {
           return (
             <div key={product.id} className={styles.card}>
+              <img src={product.image} alt={`Preview of ${product.title}`} />
               <h3>{product.title}</h3>
               <p>{product.description}</p>
               <p>${product.price}</p>
