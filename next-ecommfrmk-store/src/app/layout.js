@@ -3,10 +3,11 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
 import { metadata } from "./metadata.js";
+import Nav from "../components/Nav";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, total }) {
 	return (
 		<html lang="en">
 			<Head>
@@ -18,7 +19,7 @@ export default function RootLayout({ children }) {
 					rel="stylesheet"
 					href="https://cdn.snipcart.com/themes/v3.2.2/default/snipcart.css"
 				/>
-				{/* <script
+				<script
 					async
 					src="https://cdn.snipcart.com/themes/v3.2.2/default/snipcart.js"
 				/>
@@ -26,9 +27,12 @@ export default function RootLayout({ children }) {
 					hidden
 					id="snipcart"
 					data-api-key="ZWE3ZTM4YjktNjZiYS00OTI4LWI5N2UtNTY4MGQyZWI3ZGEwNjM4MzM2MjA1ODc2Nzg2MzYx"
-				/> */}
+				/>
 			</Head>
-			<body className={inter.className}>{children}</body>
+			<body className={inter.className}>
+				<Nav total={total} />
+				{children}
+			</body>
 		</html>
 	);
 }
