@@ -9,14 +9,14 @@ import Container from "../components/Container";
 // Rest of the component code
 
 export default function Home() {
-	return (
-		<main className={styles.main}>
-			<div className={styles.description}>
-				<p>Ecommerce Framework 10-22-2023&nbsp;</p>
-				<div>
-					<p>By Web Warlocks</p>
-				</div>
-			</div>
+  return (
+    <main className={styles.main}>
+      <div className={styles.description}>
+        <p>Ecommerce Framework 10-22-2023&nbsp;</p>
+        <div>
+          <p>By Web Warlocks</p>
+        </div>
+      </div>
 
       <div>
         <Image
@@ -30,26 +30,25 @@ export default function Home() {
           }}
         />
       </div>
-
-<<<<<<<<< Temporary merge branch 1
-			<div className={styles.grid}>
-				{products.map((product) => {
-					return (
-						<div key={product.id} className={styles.card}>
-							<img src={product.image} alt={`Preview of ${product.title}`} />
-							<h3>{product.title}</h3>
-							<p>{product.description}</p>
-							<p>${product.price}</p>
-							<p>
-								<button>Add to Cart</button>
-							</p>
-						</div>
-					);
-				})}
-			</div>
-		</main>
-	);
-=========
+      <h1 className={styles.title}>
+        Try <Link href="/pages/first-category">this page!</Link>
+      </h1>
+      <div className={styles.grid}>
+        {products.map((product) => {
+          return (
+            <div key={product.id} className={styles.card}>
+              <img src={product.image} alt={`Preview of ${product.title}`} />
+              <h3>{product.title}</h3>
+              <p>{product.description}</p>
+              <p>${product.price}</p>
+              <p>
+                <button>Add to Cart</button>
+              </p>
+            </div>
+          );
+        })}
+      </div>
+      );
       <div className={styles.grid}>
         {products.map((product) => {
           return (
@@ -66,5 +65,4 @@ export default function Home() {
       </div>
     </main>
   );
->>>>>>>>> Temporary merge branch 2
 }
