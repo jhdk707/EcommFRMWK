@@ -18,6 +18,15 @@ export default function RootLayout({ children }) {
 					rel="stylesheet"
 					href="https://cdn.snipcart.com/themes/v3.2.2/default/snipcart.css"
 				/>
+				{/* <script
+					async
+					src="https://cdn.snipcart.com/themes/v3.2.2/default/snipcart.js"
+				/>
+				<div
+					hidden
+					id="snipcart"
+					data-api-key="ZWE3ZTM4YjktNjZiYS00OTI4LWI5N2UtNTY4MGQyZWI3ZGEwNjM4MzM2MjA1ODc2Nzg2MzYx"
+				/> */}
 			</Head>
 			<body className={inter.className}>{children}</body>
 		</html>
