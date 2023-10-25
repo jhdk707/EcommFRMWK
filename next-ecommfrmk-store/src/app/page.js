@@ -80,6 +80,7 @@ import styles from "./page.module.css";
 import Warlock from "../../public/images/the-web-warlock.png";
 import { useState, useEffect } from "react";
 
+
 function Home() {
 	const [total, setTotal] = useState(0);
 
@@ -88,6 +89,7 @@ function Home() {
 			setTotal(window.Snipcart.store.getState().cart.total);
 		}
 	}, []);
+
 
 	return (
 		<main className={styles.main}>
@@ -116,6 +118,7 @@ function Home() {
 			</div> */}
 		</main>
 	);
+
 }
 
 export default Home;
