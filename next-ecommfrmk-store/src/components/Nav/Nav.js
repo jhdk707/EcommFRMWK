@@ -61,7 +61,9 @@ const Nav = ({ total }) => {
 					<Link href="/">Saurons Sources</Link>
 				</p>
 				<p className={styles.description}>
-					<Link href="/Products">Products</Link>
+					{/* <Link href="/Products">Products</Link> */}
+					<Link href="/Products/ProductsPage">Products</Link>
+
 					<a
 						className="snipcart-checkout snipcart-summary"
 						href="#"
